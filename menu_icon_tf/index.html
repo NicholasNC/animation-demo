@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./styles/index.css">
+    </head>
+    <body>
+        <a href="javascript:;" class="menu menu-white menu-spinkit" data-flag="0">
+            <span class="menu-icon-line-1 menu-icon-line"></span>
+            <span class="menu-icon-line-2 menu-icon-line"></span>
+            <span class="menu-icon-line-3 menu-icon-line"></span>
+        </a>
+        <script src="./scripts/jquery-3.1.1.min.js"></script>
+        <script>
+            $('.menu').bind('click', function(event) {
+                var $this = $(this),
+                    flag = $this.attr('data-flag');
+                
+                if (flag == 0) {
+                    $(this).addClass('menu-active');
+                    $this.attr('data-flag', 1);
+                } else {
+                    $(this).removeClass('menu-active');
+                    $this.attr('data-flag', 0);
+                }
+            });
+        </script>
+    </body>
+</html>
